@@ -1,4 +1,4 @@
-﻿Shader "Custom/Mask" {
+﻿Shader "Custom/Object" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
@@ -6,17 +6,14 @@
 		_Metallic ("Metallic", Range(0,1)) = 0.0
 	}
 	SubShader {
-		Tags { "RenderType"="Opaque" "Queue"="Geometry-100" }
-		ColorMask 0
-		ZWrite off
+		Tags { "RenderType"="Opaque" }
 		LOD 200
 
 		Stencil {
 			Ref 1
-			Comp always
-			Pass replace
+			Comp equal
 		}
-
+		
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
 		#pragma surface surf Standard fullforwardshadows
