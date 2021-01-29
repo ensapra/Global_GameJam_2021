@@ -21,6 +21,7 @@ public class MovementComponent : MonoBehaviour
     {
         MovePlayer();
     }
+
     void MovePlayer()
     {
         Vector3 movementVector = new Vector3(input.getXinput(), 0 , input.getYinput());
