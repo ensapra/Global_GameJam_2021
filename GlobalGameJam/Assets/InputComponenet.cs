@@ -11,8 +11,8 @@ public class InputComponenet : MonoBehaviour
 
     void Update()
     {
-        xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
+        xInput = Input.GetAxisRaw("Horizontal");
+        yInput = Input.GetAxisRaw("Vertical");
         running = Input.GetKey(KeyCode.LeftShift);
     }
     public float getXinput()

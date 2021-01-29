@@ -9,6 +9,7 @@ public class MovementComponent : MonoBehaviour
     public float speed;
     public float maxVelocity;
     public float smoothVelocityGainSpeed;
+    public Vector3 currentVel;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +24,8 @@ public class MovementComponent : MonoBehaviour
     void MovePlayer()
     {
         Vector3 movementVector = new Vector3(input.getXinput(), 0 , input.getYinput());
-        Vector3 velocityVector = Vector3.Lerp(rb.velocity, movementVector.normalized*speed, Time.deltaTime*smoothVelocityGainSpeed*10);
-        velocityVector = Vector3.ClampMagnitude(velocityVector, maxVelocity);
-        velocityVector.y = rb.velocity.y;
-        rb.velocity = velocityVector;
+        currentVel = Vector3.Lerp(currentVel, movementVector.normalized*speed, Time.deltaTime*smoothVelocityGainSpeed*10);
+        rb.velocity = currentVel + rb.velocity.y*Vector3.up;
     }
 
 }
