@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(InputComponenet))]
 public class MovementComponent : MonoBehaviour
 {
     Rigidbody rb;
