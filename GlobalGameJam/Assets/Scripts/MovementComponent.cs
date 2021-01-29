@@ -8,7 +8,7 @@ public class MovementComponent : MonoBehaviour
     InputComponenet input;
     public float speed;
     public float maxVelocity;
-    public float smoothVelocityGainSpeed;
+    [Range(0,1)] public float smoothVelocityGainSpeed;
     public Vector3 currentVel;
     // Start is called before the first frame update
     void Start()
