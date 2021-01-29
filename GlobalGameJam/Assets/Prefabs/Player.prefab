@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1713358252}
   - component: {fileID: 1713358253}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 'Point Light '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 7911367868931903326}
   - component: {fileID: 7911367868931903325}
   - component: {fileID: 7911367868931903324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 7911367869165459841}
   - component: {fileID: 7911367869165459840}
   - component: {fileID: 7911367869165459852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 7911367869982959593}
   - component: {fileID: 7911367869982959592}
   - component: {fileID: 7911367869982959383}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: field of view
   m_TagString: Untagged
   m_Icon: {fileID: 0}
