@@ -447,6 +447,7 @@ GameObject:
   - component: {fileID: 483223804}
   - component: {fileID: 483223805}
   - component: {fileID: 483223806}
+  - component: {fileID: 483223807}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -485,7 +486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   maxVelocity: 2
-  smoothVelocityGainSpeed: 0
+  smoothVelocityGainSpeed: 0.186
 --- !u!54 &483223805
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -498,9 +499,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &483223806
 MonoBehaviour:
@@ -514,6 +515,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18f3f817f74d3841801fa343468268c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &483223807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483223802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18fd9f2cac68d54a95b6165c7bfe65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothRotation: 0.434
 --- !u!1001 &490619400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1059,6 +1073,7 @@ GameObject:
   - component: {fileID: 1289426065}
   - component: {fileID: 1289426064}
   - component: {fileID: 1289426067}
+  - component: {fileID: 1289426068}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1124,13 +1139,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289426063}
-  m_LocalRotation: {x: 0.49969754, y: 0, z: 0, w: 0.8662}
-  m_LocalPosition: {x: 0, y: 3.15, z: -2.41}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.251, z: -2.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 59.96, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1289426067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,6 +1177,21 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1289426068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289426063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61ff78fccdc35e47b58becf6703c3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTarget: {fileID: 483223802}
+  height: 4
+  speed: 0.372
 --- !u!1001 &2105200363
 PrefabInstance:
   m_ObjectHideFlags: 0
