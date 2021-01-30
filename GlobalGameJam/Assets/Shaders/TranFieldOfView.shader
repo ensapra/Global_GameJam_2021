@@ -43,6 +43,7 @@ Shader "Custom/TransparentFieldOfView"
             sampler2D _MainTex;
             float4 _MainTex_ST;
             float4 _Color;
+            float _Emission;
 
             v2f vert (appdata_t v)
             {
@@ -51,7 +52,7 @@ Shader "Custom/TransparentFieldOfView"
                 o.vertex     = UnityObjectToClipPos(v.vertex);
                 v.texcoord.x = 1 - v.texcoord.x;
                 o.texcoord   = TRANSFORM_TEX(v.texcoord, _MainTex);
-
+                
                 return o;
             }
 
