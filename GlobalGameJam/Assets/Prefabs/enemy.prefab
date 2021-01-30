@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2001189944}
   - component: {fileID: 2001189943}
   - component: {fileID: 2001189942}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: field of view (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 2711566363676481286}
   - component: {fileID: 2711566363676481284}
   - component: {fileID: 1483713293839267883}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 2711566364295902543}
   - component: {fileID: 2711566364295902540}
   - component: {fileID: 2711566364295902541}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
