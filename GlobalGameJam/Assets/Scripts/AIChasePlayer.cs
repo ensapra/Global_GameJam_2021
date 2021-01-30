@@ -5,12 +5,10 @@ using UnityEngine.AI;
 
 public class AIChasePlayer : MonoBehaviour
 {
-
-
     FieldOfView fieldOfView;
-    [Tooltip("needs to be the mesh of the field of view object")] [SerializeField] MeshRenderer meshRenderer;
-    [SerializeField] Material seeTarget;
-    Material normalMat;
+    [Tooltip("needs to be the light of view object")] [SerializeField] Light enemyLight;
+    [SerializeField] Color normalColor;
+    [SerializeField] Color seeTargetColor;
     AIMoveRandomly AIMoveRandomly;
     NavMeshAgent agent;
 
@@ -23,7 +21,6 @@ public class AIChasePlayer : MonoBehaviour
     void Awake()
     {
         fieldOfView = GetComponentInChildren<FieldOfView>();
-        normalMat = meshRenderer.material;
         AIMoveRandomly = GetComponent<AIMoveRandomly>();
         agent = GetComponent<NavMeshAgent>();
     }
@@ -36,7 +33,7 @@ public class AIChasePlayer : MonoBehaviour
         if(state==State.searching && stateSeePlayer)        //upon first seeing player
         {
             state = State.Chasing;
-            meshRenderer.material = seeTarget;
+            enemyLight.color = seeTargetColor;
             if (AIMoveRandomly != null)
                 Destroy(AIMoveRandomly);
             playerRef = fieldOfView.visibleTargets[0];
