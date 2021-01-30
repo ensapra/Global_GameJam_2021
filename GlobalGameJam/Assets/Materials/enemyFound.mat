@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: enemyFieldOfView
+  m_Name: enemyFound
   m_Shader: {fileID: 4800000, guid: 3cc46849d638c28429900941b60293e4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -70,9 +70,8 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Transparency: 140.5
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.86054194, b: 0, a: 0.11764706}
+    - _Color: {r: 1, g: 0, b: 0, a: 0.11764706}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
